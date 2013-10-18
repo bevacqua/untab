@@ -1,0 +1,23 @@
+.tv-content
+  display none
+
+.tv-radio
+  position absolute
+  overflow hidden
+  clip rect(0 0 0 0)
+  height 1px
+  width 1px
+  margin -1px
+  padding 0
+  border 0
+
+  &:checked + .tv-content
+    display block
+
+.tv-tab
+  display inline-block
+  cursor pointer
+  padding 8px
+
+  &:hover
+    opacity 0.9
