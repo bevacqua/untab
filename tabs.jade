@@ -1,0 +1,69 @@
+div.tv-tabs
+  label.tv-tab(for='tv-tab-1') Intro
+  label.tv-tab(for='tv-tab-2') Code
+  label.tv-tab(for='tv-tab-3') ?
+
+input.tv-radio#tv-tab-1(name='tv-group', type='radio', checked)
+div.tv-content
+  h1 Intro
+  p These are some awesome tabs!
+  ul
+    li No JavaScript
+    li 100% Healthy, Plain CSS
+    li Barely any hackery
+    li Kind of verbose, HTML-wise...
+  p
+    | Check out the 
+    label.tv-link(for='tv-tab-2') source code
+    | !
+input.tv-radio#tv-tab-2(name='tv-group', type='radio')
+div.tv-content
+  h1 Code
+  p="Kind of verbose, here is the Jade source. Most JS libraries still ask for similar markup that's hardly any better, though."
+  p HTML (Jade) Code:
+  pre
+    code
+      | div.tv-tabs
+      |   label.tv-tab(for='tv-tab-1') Tab Name!
+      |   label.tv-tab(for='tv-tab-n') for attr equals the radio ids
+      | 
+      | input.tv-radio#tv-tab-1(name='any-group-name', type='radio', checked)
+      | div.tv-content Content goes here!
+      | 
+      | input.tv-radio#tv-tab-n(name='any-group-name', type='radio')
+      | div.tv-content More goes here!
+  p Relevant CSS (Stylus) Code:
+  pre
+    code
+      | .tv-content
+      |   display none
+      | 
+      | .tv-radio
+      |   // hide the radio here
+      | 
+      |   &:checked + .tv-content
+      |     display block
+      
+  p The trick is in the details.
+  ul
+    li Clicking on the labels is effectively the same as clicking on the input boxes
+    li The radio inputs are hidden with CSS
+    li When a radio is selected, their curious tab content neighbors show up
+    li="That's it! The only drawback is you won't be able to style the selected tab without resorting to some JS, but that shouldn't be a very big deal."
+
+input.tv-radio#tv-tab-3(name='tv-group', type='radio')
+div.tv-content
+  h1 ?
+  p  Hey there!
+  ul
+    li
+      | I blog at 
+      a(href='http://blog.ponyfoo.com') Pony Foo
+    li
+      | I tweet as 
+      a(href='https://twitter.com/nzgb') @nzgb
+    li
+      | I push code to GitHub
+      a(href='https://github.com/bevacqua') @bevacqua
+  p
+    em Later...
