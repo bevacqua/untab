@@ -8,6 +8,6 @@ You can find a working example [on CodePen](http://codepen.io/bevacqua/full/qxnD
 
 ![tabs.png][1]
 
-Talked about on [Pony Foo](http://blog.ponyfoo.com/2013/10/18/tab-views-that-dont-suck "Tab Views That Don't Suck on Pony Foo").
+Talked about on [Pony Foo](http://blog.ponyfoo.com/2013/10/18/your-tab-views-suck "Your Tab Views Suck on Pony Foo").
 
   [1]: http://i.imgur.com/rUBqxhh.png
